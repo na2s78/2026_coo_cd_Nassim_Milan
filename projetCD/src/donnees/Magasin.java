@@ -56,7 +56,7 @@ public class Magasin {
 	}
 	
 	/**
-	 * permet d'acceder � un CD
+	 * permet d'acceder � un CD
 	 * 
 	 * @return le cd a l'indice i ou null si indice est non valide
 	 */
@@ -68,6 +68,33 @@ public class Magasin {
 		return(res);
 	}
 
-	// TODO  ajouter une methode de tri
+	/**
+	 * Méthode qui trie les albums par titre en utilisant le tri par sélection.
+	 */
+	public void trierAlbum() {
+		ArrayList<CD> nouvelleListeTriee = new ArrayList<CD>();
+
+
+		while (this.listeCds.size() > 0) {
+
+			int indice = 0;
+
+			for (int i = 1; i < this.listeCds.size(); i++) {
+				CD cdCourant = this.listeCds.get(i);
+				CD cdMini = this.listeCds.get(indice);
+
+				if (cdCourant.plusPetitQue(cdMini)) {
+					indice = i;
+				}
+			}
+
+
+			CD PlusPetitCd = this.listeCds.remove(indice);
+
+			nouvelleListeTriee.add(PlusPetitCd);
+		}
+
+		this.listeCds = nouvelleListeTriee;
+	}
 
 }

@@ -102,7 +102,7 @@ public class CD {
 	 * @param cd
 	 * @return vrai si le titre est plus petit
 	 */
-	public boolean estPlusPetitQue(CD cd) {
+	public boolean plusPetitQue(CD cd) {
 		// On compare le nom du CD actuel avec le nom du CD passé en paramètre
 		if (this.nomCD.compareTo(cd.nomCD) < 0) {
 			return true;
