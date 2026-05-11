@@ -3,9 +3,8 @@ package XML;
 
 import java.io.FileNotFoundException;
 import donnees.Magasin;
-import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
 public class chargeurMagasinTest {
